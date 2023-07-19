@@ -1,6 +1,5 @@
-# %%
-
 import asyncio
+
 
 # %%
 # asyncio  call later
@@ -27,10 +26,9 @@ finally:
     print("closing event loop")
     event_loop.close()
 
+
 # %%
 # Pass Croutine to loop call later
-
-
 async def foo(iv, start):
     await asyncio.sleep(1)
     offset = asyncio.get_running_loop().time() - start
@@ -52,5 +50,3 @@ async def demo():
 if __name__ == "__main__":
     pass
     asyncio.run(demo())
-
-# %%
