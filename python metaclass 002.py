@@ -38,9 +38,7 @@ if __name__ == "__main__":
     pprint.pprint(CustomMetaclass.handlers)
 
     vh = VideoHandler()
-
     # print(type(vh))
     # print(type(CustomMetaclass.handlers["mp4"]))
     # print(type(type(CustomMetaclass.handlers["mp4"])))
-
     pass

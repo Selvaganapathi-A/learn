@@ -1,10 +1,12 @@
-from typing import Any, Self
+from typing import Any, Self, TypeVar
 
 
 class A:
     @staticmethod
-    def __new__(cls, value: str) -> Self:  # type: ignore
+    def __new__(cls: type["A"], value: str) -> type["A"]:
         print("__new__ method.")
+        print(dir(object))
+        # print(help(type))
         return object.__new__(cls)
 
     def __init__(self, value: str) -> None:
@@ -22,6 +24,7 @@ class A:
 
 
 if __name__ == "__main__":
+    print()
     a = A("poll")
 
     print(a)
