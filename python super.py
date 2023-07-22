@@ -1,5 +1,5 @@
 class Rectangle:
-    def __init__(self, length, width):
+    def __init__(self, length: float, width: float):
         self.length = length
         self.width = width
 
@@ -11,7 +11,7 @@ class Rectangle:
 
 
 class Square(Rectangle):
-    def __init__(self, length):
+    def __init__(self, length: float):
         super(Square, self).__init__(length, length)
 
     def view(self):
@@ -22,7 +22,6 @@ if __name__ == "__main__":
     rect = Rectangle(80, 90)
 
     sqr = Square(70)
-
     #
     print(sqr.area())
     print(sqr.perimeter())
